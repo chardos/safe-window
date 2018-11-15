@@ -1,7 +1,11 @@
 {
   "name": "window-get",
-  "version": "1.0.0",
-  "description": "",
+  "description": "A utility for getting properties from the window object in projects that render on both the server and the client.",
+  "version": "1.0.1",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/chardos/window-get.git"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "jest --watchAll"

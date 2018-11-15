@@ -1,4 +1,6 @@
-## window-get
+# window-get
+
+[![npm version](https://img.shields.io/npm/v/window-get.svg?style=flat)](https://www.npmjs.com/package/window-get)
 
 A utility for getting properties from the window object in projects that render on both the server and the client.
 
