@@ -1,8 +1,8 @@
 {
   "name": "window-get",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "jest --watchAll"
   },
@@ -12,6 +12,6 @@
     "testEnvironment": "node"
   },
   "devDependencies": {
-    "jest": "^23.6.0"
+    "jest": "23.6.0"
   }
 }
