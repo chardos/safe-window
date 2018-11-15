@@ -15,7 +15,7 @@ describe('when window does not exist', () => {
         expect(
             windowGet('foo.bar')
         ).toBe(null);
-    })
+    });
 });
 
 describe('when window exists', () => {
@@ -35,5 +35,13 @@ describe('when window exists', () => {
             }
         }
         expect(windowGet('foo.bar.0.salami')).toBe('sandwich');
+    })
+
+    test('when path not found, returns the default', () => {
+        global.window = {foo: 'bar'}
+
+        expect(
+            windowGet('foo.bar')
+        ).toBe(null)
     })
 });
