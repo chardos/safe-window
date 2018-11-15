@@ -1,10 +1,10 @@
 {
   "name": "safe-window",
   "description": "A utility for safely getting properties from the window object in projects that render on both the server and the client.",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/chardos/window-get.git"
+    "url" : "https://github.com/chardos/safe-window.git"
   },
   "main": "src/index.js",
   "scripts": {
