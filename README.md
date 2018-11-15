@@ -7,7 +7,7 @@ A utility for getting properties from the window object in projects that render 
 ### Installation
 
 ```
-npm install window-get
+npm i -S window-get
 ```
 
 ### Usage
