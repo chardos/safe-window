@@ -1,4 +1,4 @@
-function windowGet(path, defaultValue = null) {
+function safeWindow(path, defaultValue = null) {
     const splitPaths = path.split('.');
     if (typeof window !== 'undefined') {
         let value = window;
@@ -17,4 +17,4 @@ function windowGet(path, defaultValue = null) {
     }
 }
 
-module.exports = windowGet;
+module.exports = safeWindow;

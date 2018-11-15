@@ -1,4 +1,4 @@
-const windowGet = require('./index.js');
+const safeWindow = require('./index.js');
 
 beforeEach(() => {
     global.window = undefined
@@ -7,13 +7,13 @@ beforeEach(() => {
 describe('when window does not exist', () => {
     test('and a default is passed, it returns the default value', () => {
         expect(
-            windowGet('foo.bar', 'camembert')
+            safeWindow('foo.bar', 'camembert')
         ).toBe('camembert');
     })
 
     test('and no default is passed, it returns null', () => {
         expect(
-            windowGet('foo.bar')
+            safeWindow('foo.bar')
         ).toBe(null);
     });
 });
@@ -25,7 +25,7 @@ describe('when window exists', () => {
                 bar: 'baz' 
             }
         }
-        expect(windowGet('foo.bar')).toBe('baz');
+        expect(safeWindow('foo.bar')).toBe('baz');
     })
 
     test('gets nested values within arrays', () => {
@@ -34,14 +34,14 @@ describe('when window exists', () => {
                 bar: [{salami: 'sandwich'}]
             }
         }
-        expect(windowGet('foo.bar.0.salami')).toBe('sandwich');
+        expect(safeWindow('foo.bar.0.salami')).toBe('sandwich');
     })
 
     test('when path not found, returns the default', () => {
         global.window = {foo: 'bar'}
 
         expect(
-            windowGet('foo.bar')
+            safeWindow('foo.bar')
         ).toBe(null)
     })
 });
