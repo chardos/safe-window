@@ -1,3 +1,3 @@
-type SafeWindow = (path:  string) => string;
+type SafeWindow = (path:  string, defaultValue?: any) => string;
 declare var safeWindow: SafeWindow;
 export default safeWindow;
